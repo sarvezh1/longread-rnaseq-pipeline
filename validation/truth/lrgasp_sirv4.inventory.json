@@ -1,0 +1,13 @@
+{
+  "schema_version": "6.0",
+  "truth_id": "lrgasp_sirv4_gtf",
+  "source_file": "lrgasp_sirvs4.gtf.gz",
+  "source_bytes": 4666,
+  "source_sha256": "d6d942ddba795d13a75a1c99c2de5af6c2a532358556ba24bb7265983e53ff72",
+  "contig_prefix": "SIRV",
+  "transcripts": 84,
+  "multi_exon_transcripts": 61,
+  "single_exon_transcripts": 23,
+  "splice_junctions": 114,
+  "reference_sequences": 22
+}

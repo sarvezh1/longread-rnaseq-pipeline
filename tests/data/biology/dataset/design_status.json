@@ -1,0 +1,8 @@
+{
+  "status": "READY",
+  "contrast": {"numerator": "treatment", "denominator": "control"},
+  "minimum_biological_replicates": 2,
+  "reasons": [],
+  "design_formula": "~ condition",
+  "platform_is_biological_condition": false
+}

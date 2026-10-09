@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "longread-rnaseq-pipeline parameters",
+  "description": "Parameters for platform-aware alignment, production IsoQuant transcript discovery, caller benchmarking, and production biological analysis of human bulk long-read RNA-seq data.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "input",
+    "fasta",
+    "gtf",
+    "genome_build",
+    "annotation_release"
+  ],
+  "x-parameter-groups": [
+    {"name":"Inputs","parameters":["input"]},
+    {"name":"References","parameters":["fasta","gtf","genome_build","annotation_release","annotation_guided_alignment"]},
+    {"name":"Execution","parameters":["help","outdir","mode","execution_profile","large_file_publish_mode"]},
+    {"name":"ONT preprocessing","parameters":[]},
+    {"name":"PacBio preprocessing","parameters":["lima_peek_guess","isoseq_include_singletons"]},
+    {"name":"Isoform discovery","parameters":["isoquant_report_novel_unspliced","transcriptome_filtering"]},
+    {"name":"Benchmark mode","parameters":["flair_min_support","flair_end_window","flair_parallel_mode","benchmark_end_bins","benchmark_single_exon_reciprocal_overlap"]},
+    {"name":"Biological analysis","parameters":["transcript_end_cluster_window","transdecoder_min_peptide_length","transdecoder_single_best_only","isoform_switch_min_dif","enable_functional_enrichment"]},
+    {"name":"Statistical design","parameters":["contrast_numerator","contrast_denominator","block4_design_formula","minimum_biological_replicates","block4_fdr"]},
+    {"name":"Reporting","parameters":["report_run_id"]},
+    {"name":"Resource limits","parameters":["max_cpus","max_memory","max_time"]}
+  ],
+  "properties": {
+    "help": {
+      "type": "boolean",
+      "default": false,
+      "description": "Print concise command-line usage and exit without executing the workflow."
+    },
+    "input": {
+      "type": "string",
+      "format": "file-path",
+      "description": "CSV sample sheet following docs/input.md."
+    },
+    "outdir": {
+      "type": "string",
+      "format": "directory-path",
+      "default": "results",
+      "description": "Directory for pipeline outputs and execution metadata."
+    },
+    "fasta": {
+      "type": "string",
+      "format": "file-path",
+      "description": "Explicit path to the human reference genome FASTA."
+    },
+    "gtf": {
+      "type": "string",
+      "format": "file-path",
+      "description": "Explicit path to the matching GENCODE GTF annotation."
+    },
+    "genome_build": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Declared genome build, initially expected to be GRCh38."
+    },
+    "annotation_release": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Declared annotation provider and release, for example GENCODE 49."
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["default", "benchmark", "biology"],
+      "default": "default",
+      "description": "Production transcriptome, comparative caller benchmark, or production biological-analysis mode."
+    },
+    "execution_profile": {
+      "type": "string",
+      "enum": ["local", "docker", "apptainer", "singularity", "test", "test_stub", "custom"],
+      "default": "local",
+      "description": "Human-readable execution environment recorded in summaries."
+    },
+    "annotation_guided_alignment": {
+      "type": "boolean",
+      "default": false,
+      "description": "Reserved switch for reproducible annotation-guided alignment. Block 1B rejects true because guided alignment is not yet implemented; default alignments remain annotation-unguided."
+    },
+    "lima_peek_guess": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable lima --peek-guess for PacBio primer sets where that behaviour is appropriate."
+    },
+    "isoseq_include_singletons": {
+      "type": "boolean",
+      "default": false,
+      "description": "Pass --singletons to isoseq cluster2. Disabled by default and recorded in provenance."
+    },
+    "large_file_publish_mode": {
+      "type": "string",
+      "enum": ["copy", "link", "rellink", "symlink"],
+      "default": "link",
+      "description": "Nextflow publish mode for large BAM and FASTQ outputs; link avoids duplicate data on a shared filesystem."
+    },
+    "max_cpus": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 16,
+      "description": "Maximum CPU request enforced through Nextflow resourceLimits."
+    },
+    "max_memory": {
+      "type": "string",
+      "default": "64 GB",
+      "description": "Maximum memory request enforced through Nextflow resourceLimits."
+    },
+    "max_time": {
+      "type": "string",
+      "default": "72 h",
+      "description": "Maximum task duration enforced through Nextflow resourceLimits."
+    },
+    "isoquant_report_novel_unspliced": {
+      "type": ["boolean", "null"],
+      "default": null,
+      "description": "Override IsoQuant's data-type-specific novel single-exon reporting policy. Null preserves the pinned tool-native default (false for ONT, true for other data types)."
+    },
+    "transcriptome_filtering": {
+      "type": "boolean",
+      "default": false,
+      "description": "Reserved switch for a future explicit curation policy. Block 2 rejects true and always preserves the raw discovered transcriptome."
+    },
+    "flair_min_support": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 3,
+      "description": "FLAIR transcriptome minimum supporting reads. The pinned FLAIR 3.0.1 default is retained."
+    },
+    "flair_end_window": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 100,
+      "description": "FLAIR TSS/TES clustering window in bases. This affects discovery and is recorded in provenance."
+    },
+    "flair_parallel_mode": {
+      "type": "string",
+      "default": "auto:1GB",
+      "description": "FLAIR transcriptome parallelization mode."
+    },
+    "benchmark_end_bins": {
+      "type": "string",
+      "default": "0,10,25,50",
+      "pattern": "^0(,[0-9]+)+$",
+      "description": "Comma-separated inclusive absolute TSS/TES difference bins in bases; analytical summaries, not biological truth thresholds."
+    },
+    "benchmark_single_exon_reciprocal_overlap": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 1,
+      "default": 0.5,
+      "description": "Minimum reciprocal genomic overlap for grouping single-exon models on the same chromosome and strand."
+    },
+    "contrast_numerator": {
+      "type": "string",
+      "default": "",
+      "description": "Explicit Block 4 contrast numerator condition; must be paired with contrast_denominator."
+    },
+    "contrast_denominator": {
+      "type": "string",
+      "default": "",
+      "description": "Explicit Block 4 contrast denominator condition; must be paired with contrast_numerator."
+    },
+    "block4_design_formula": {
+      "type": "string",
+      "default": "~0 + condition",
+      "description": "No-intercept R design formula for edgeR and satuRn; condition is required and sample metadata columns may be added as covariates."
+    },
+    "minimum_biological_replicates": {
+      "type": "integer",
+      "minimum": 2,
+      "default": 2,
+      "description": "Minimum distinct biological replicate labels required in each contrasted condition."
+    },
+    "block4_fdr": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 1,
+      "default": 0.05,
+      "description": "Reported multiple-testing threshold; effect sizes remain available independently."
+    },
+    "transcript_end_cluster_window": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 50,
+      "description": "Configurable coordinate window for descriptive putative TSS/TES clustering."
+    },
+    "transdecoder_min_peptide_length": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 100,
+      "description": "Minimum candidate peptide length supplied to TransDecoder."
+    },
+    "transdecoder_single_best_only": {
+      "type": "boolean",
+      "default": false,
+      "description": "Ask TransDecoder to retain only one ORF per transcript; false preserves alternative candidates."
+    },
+    "isoform_switch_min_dif": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "default": 0.1,
+      "description": "IsoformSwitchAnalyzeR minimum absolute isoform-fraction change."
+    },
+    "enable_functional_enrichment": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable local human GO enrichment using the testable gene universe; no external pathway service is queried."
+    },
+    "report_run_id": {
+      "type": "string",
+      "default": "",
+      "pattern": "^[A-Za-z0-9_.-]*$",
+      "description": "Optional stable report run identifier. Empty uses the Nextflow run name."
+    }
+  }
+}

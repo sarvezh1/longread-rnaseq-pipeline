@@ -1,0 +1,53 @@
+.nextflow*
+work/
+results/
+.block1c_work/
+.integration-fixtures/
+.block*_test/
+.block*_work/
+.block*_results/
+
+# Generated language and test caches
+__pycache__/
+*.py[cod]
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.Rhistory
+.RData
+
+# Downloaded sequencing data and container/database archives
+*.bam
+*.bai
+*.cram
+*.crai
+*.fastq
+*.fq
+*.fastq.gz
+*.fq.gz
+!tests/data/structural/ont.fastq
+!tests/data/structural/pacbio_hifi.bam
+!tests/data/structural/pacbio_flnc.bam
+!tests/data/validation/reads.fastq
+*.sif
+*.img
+*.tar
+*.tar.gz
+databases/
+validation/data/
+validation/work/
+validation/results/
+
+# Nextflow execution reports and logs
+.nextflow.log*
+timeline.html
+report.html
+trace.txt
+dag.html
+
+# Local editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

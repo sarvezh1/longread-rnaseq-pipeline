@@ -1,0 +1,6 @@
+isoform	structural_category	associated_gene	associated_transcript
+fl_shared	full-splice_match	gene_shared	ref1
+fl_chain	novel_in_catalog	gene_chain	NA
+fl_partial	novel_not_in_catalog	gene_partial	NA
+fl_single	intergenic	gene_single	NA
+fl_only	incomplete-splice_match	gene_fl	ref2

@@ -1,0 +1,19 @@
+{
+  "schema_version": "6.0",
+  "frozen_before_comparative_scoring": true,
+  "exact_multi_exon": "same reference sequence, strand, complete ordered intron chain, and strand-aware TSS/TES within the configured end tolerance",
+  "exact_single_exon": "same reference sequence and strand, with strand-aware TSS/TES within the configured end tolerance; never included in intron-chain metrics",
+  "intron_chain": "same reference sequence, strand, and complete ordered intron chain, independent of transcript ends",
+  "splice_junction": "same reference sequence, strand, intron start, and intron end",
+  "default_end_tolerance_bp": 0,
+  "truth_counting": "unique structural models; deterministic one-to-one matching",
+  "precision": "TP/(TP+FP)",
+  "recall": "TP/(TP+FN)",
+  "f1": "harmonic mean of precision and recall",
+  "empty_truth_policy": "precision/recall/F1 are null and status is EMPTY_TRUTH",
+  "zero_detection_policy": "precision is null, recall is zero for non-empty truth, F1 is null, and status is ZERO_DETECTION",
+  "novelty_policy": "absence from an annotation is not treated as false without a truth set",
+  "downsampling": {"method": "SHA-256 threshold on seed plus read identifier", "seed": 61703, "fractions": [0.1, 0.25, 0.5, 0.75, 1.0], "nested": true, "pseudo_replicate": false},
+  "support_thresholds": [1, 2, 3, 5, 10],
+  "production_defaults_changed": false
+}

@@ -1,0 +1,11 @@
+title: longread-rnaseq-pipeline QC
+subtitle: Deterministic sequencing and alignment quality-control aggregation
+intro_text: Standard tool-native QC metrics. Scientific analysis results are reported separately.
+no_ai: true
+ai_summary: false
+ai_summary_full: false
+no_version_check: true
+show_analysis_paths: false
+show_analysis_time: false
+export_plots: false
+

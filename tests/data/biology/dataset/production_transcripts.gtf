@@ -1,0 +1,13 @@
+chrTest	fixture	transcript	100	500	.	+	.	gene_id "G1"; transcript_id "T1"; gene_name "G1";
+chrTest	fixture	exon	100	500	.	+	.	gene_id "G1"; transcript_id "T1"; gene_name "G1"; exon_number "1";
+chrTest	fixture	transcript	1000	1499	.	+	.	gene_id "G2"; transcript_id "T2a"; gene_name "G2";
+chrTest	fixture	exon	1000	1099	.	+	.	gene_id "G2"; transcript_id "T2a"; gene_name "G2"; exon_number "1";
+chrTest	fixture	exon	1200	1299	.	+	.	gene_id "G2"; transcript_id "T2a"; gene_name "G2"; exon_number "2";
+chrTest	fixture	exon	1400	1499	.	+	.	gene_id "G2"; transcript_id "T2a"; gene_name "G2"; exon_number "3";
+chrTest	fixture	transcript	1000	1499	.	+	.	gene_id "G2"; transcript_id "T2b"; gene_name "G2";
+chrTest	fixture	exon	1000	1099	.	+	.	gene_id "G2"; transcript_id "T2b"; gene_name "G2"; exon_number "1";
+chrTest	fixture	exon	1400	1499	.	+	.	gene_id "G2"; transcript_id "T2b"; gene_name "G2"; exon_number "2";
+chrTest	fixture	transcript	2000	2399	.	-	.	gene_id "G3"; transcript_id "T3"; gene_name "G3";
+chrTest	fixture	exon	2000	2399	.	-	.	gene_id "G3"; transcript_id "T3"; gene_name "G3"; exon_number "1";
+chrTest	fixture	transcript	3000	3299	.	+	.	gene_id "G4"; transcript_id "TZERO"; gene_name "G4";
+chrTest	fixture	exon	3000	3299	.	+	.	gene_id "G4"; transcript_id "TZERO"; gene_name "G4"; exon_number "1";

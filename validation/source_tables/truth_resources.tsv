@@ -1,0 +1,5 @@
+truth_id	resource_type	source_url	compressed_bytes	checksum_type	checksum	role
+lrgasp_sirv4_fasta	FASTA	https://zenodo.org/records/10884185/files/lrgasp_sirv4.fasta.gz?download=1	131526	MD5	3158b5271214ddab75245f41323bb747	experimental spike-in sequence
+lrgasp_sirv4_gtf	GTF	https://zenodo.org/records/10884185/files/lrgasp_sirvs4.gtf.gz?download=1	4700	MD5	deed7087a7c71b6e8d8f2db3fa7399bd	experimental spike-in transcript truth
+lrgasp_grch38_sirv4_fasta	FASTA	https://zenodo.org/records/10884185/files/lrgasp_grch38_sirvs.fasta.gz?download=1	886500000	MD5	10a8f38fff29a866389ed8ace4caeeb8	reconstruction reference
+lrgasp_gencode_v38_sirv4_gtf	GTF	https://zenodo.org/records/10884185/files/lrgasp_gencode_v38_sirvs.gtf.gz?download=1	50200000	MD5	0c91a6c6fe7453093d2a2ddc5bfb29c3	published combined annotation; not hidden-novel truth

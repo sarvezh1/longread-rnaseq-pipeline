@@ -1,0 +1,7 @@
+depth	f1	caller
+0.1	0.2	IsoQuant
+0.5	0.6	IsoQuant
+1.0	0.8	IsoQuant
+0.1	0.15	FLAIR
+0.5	0.55	FLAIR
+1.0	0.75	FLAIR

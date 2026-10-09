@@ -1,0 +1,6 @@
+sample,platform,library_type,preprocessing,condition,replicate,reads,primer_fasta,primer_pair,ont_kit,require_polya
+control_1,ont,cdna,pychopper,control,1,data/control_1.fastq.gz,,,PCS114,false
+control_2,ont,cdna,pychopper,control,2,data/control_2.fastq.gz,,,PCS114,false
+treatment_1,ont,cdna,pychopper,treatment,1,data/treatment_1.fastq.gz,,,PCS114,false
+treatment_2,ont,cdna,pychopper,treatment,2,data/treatment_2.fastq.gz,,,PCS114,false
+

@@ -1,0 +1,5 @@
+isoform	structural_category	associated_gene	associated_transcript
+ba_shared	full-splice_match	gene_shared	ref1
+ba_chain	novel_in_catalog	gene_chain	NA
+ba_single	intergenic	gene_single	NA
+ba_only	novel_not_in_catalog	gene_ba	NA

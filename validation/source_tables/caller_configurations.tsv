@@ -1,0 +1,5 @@
+tool	version	role	configuration	support_semantics	container
+IsoQuant	4.0.0	production caller	frozen Block 2 platform-aware data type; no benchmark retuning	IsoQuant transcript-model read assignment/count	quay.io/biocontainers/isoquant:4.0.0--pyh106432d_0@sha256:ff40b81d8945f6724184fb5be90fb3740cbf9b6fe2680db4cbeed816bab73142
+FLAIR	3.0.1	benchmark challenger	frozen Block 3 normalized BAM; min support 3; end window 100	FLAIR read-to-isoform assignment count	quay.io/biocontainers/flair:3.0.1--pyhdfd78af_0@sha256:a39894c1507c68241fba62ddbe1a931d5a6bfaacbcb6be24631d46b60e67ce84
+bambu	3.14.0	benchmark challenger	frozen Block 3 normalized BAM; Bioconductor 3.23; R 4.6.1	Bambu caller-native abundance/support	longread-rnaseq-pipeline/bambu:3.14.0-bioc3.23-r4.6 image sha256:8e073d65a08cd3924b4e43491e9b20f191408e1e2c3a4cf4ee064fe0eb33b647
+SQANTI3	6.0.2	common characterization	identical reference, annotation, version, and classification settings across callers	not applicable	quay.io/biocontainers/sqanti3:6.0.2--hdfd78af_1@sha256:3ebeb658fb2e0e308e73cba50dd3b97c63963d8225f303f298ad8ee76264939d

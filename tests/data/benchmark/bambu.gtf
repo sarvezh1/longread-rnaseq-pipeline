@@ -1,0 +1,11 @@
+chr1	fixture	transcript	100	399	.	+	.	gene_id "gene_shared"; transcript_id "ba_shared";
+chr1	fixture	exon	100	199	.	+	.	gene_id "gene_shared"; transcript_id "ba_shared";
+chr1	fixture	exon	300	399	.	+	.	gene_id "gene_shared"; transcript_id "ba_shared";
+chr1	fixture	transcript	510	789	.	+	.	gene_id "gene_chain"; transcript_id "ba_chain";
+chr1	fixture	exon	510	599	.	+	.	gene_id "gene_chain"; transcript_id "ba_chain";
+chr1	fixture	exon	700	789	.	+	.	gene_id "gene_chain"; transcript_id "ba_chain";
+chr1	fixture	transcript	1505	1595	.	+	.	gene_id "gene_single"; transcript_id "ba_single";
+chr1	fixture	exon	1505	1595	.	+	.	gene_id "gene_single"; transcript_id "ba_single";
+chr3	fixture	transcript	100	399	.	-	.	gene_id "gene_ba"; transcript_id "ba_only";
+chr3	fixture	exon	100	199	.	-	.	gene_id "gene_ba"; transcript_id "ba_only";
+chr3	fixture	exon	300	399	.	-	.	gene_id "gene_ba"; transcript_id "ba_only";

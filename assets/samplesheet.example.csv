@@ -1,0 +1,5 @@
+sample,platform,library_type,preprocessing,condition,replicate,reads,primer_fasta,primer_pair,ont_kit,require_polya
+ont_cdna_1,ont,cdna,pychopper,control,1,/path/to/ont_cdna_1.fastq.gz,,,PCS111,false
+ont_pcr_cdna_bypass_1,ont,pcr_cdna,none,treated,1,/path/to/ont_pcr_cdna_bypass_1.fastq.gz,,,,false
+pacbio_hifi_1,pacbio,isoseq_hifi,isoseq,control,1,/path/to/pacbio_hifi_1.hifi_reads.bam,/path/to/library_primers.fasta,IsoSeqX_bc01_5p--IsoSeqX_3p,,true
+pacbio_flnc_1,pacbio,isoseq_flnc,none,treated,1,/path/to/pacbio_flnc_1.flnc.bam,,,,false

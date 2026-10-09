@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structural:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Python and JSON validation
+        run: |
+          python -m py_compile bin/*.py tests/contracts/*.py tests/integration/*.py
+          python -m json.tool nextflow_schema.json >/dev/null
+          python -m json.tool assets/reporting/status_vocabulary.json >/dev/null
+          python -m json.tool assets/reporting/tool_registry.json >/dev/null
+          python -m json.tool validation/manifests/metric_definitions.json >/dev/null
+          python tests/contracts/audit_fixture_paths.py
+          find . -type d -name __pycache__ -prune -exec rm -rf {} +
+      - name: Shell syntax
+        run: find tests -name '*.sh' -print0 | xargs -0 -n1 bash -n
+      - name: Report regressions
+        run: python tests/contracts/run_block5_report_tests.py
+      - name: Validation metric regressions
+        run: python tests/contracts/run_block6_validation_tests.py
+      - name: Release-readiness checks
+        run: python bin/release_readiness.py --allow-git-metadata
+
+  nextflow-stub:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Install pinned Nextflow
+        env:
+          NXF_VER: '26.04.6'
+        run: |
+          curl -fsSL https://get.nextflow.io | bash
+          sudo install nextflow /usr/local/bin/nextflow
+          nextflow -version
+      - name: Resolve configuration
+        run: nextflow config -profile test_stub >/dev/null
+      - name: Stub workflow contracts
+        run: bash tests/contracts/run_stub_contracts.sh
+      - name: Validation scoring stub
+        run: nextflow run validation/workflow.nf -c validation/nextflow.config -profile stub --input tests/data/validation/scoring.tsv --outdir validation/results/stub -stub-run

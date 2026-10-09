@@ -1,0 +1,36 @@
+name: Manual real integration
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Workflow mode to validate
+        required: true
+        default: biology
+        type: choice
+        options: [default, benchmark, biology]
+
+permissions:
+  contents: read
+
+jobs:
+  integration:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Install pinned Nextflow
+        env:
+          NXF_VER: '26.04.6'
+        run: |
+          curl -fsSL https://get.nextflow.io | bash
+          sudo install nextflow /usr/local/bin/nextflow
+      - name: Prepare provenance-documented fixtures
+        run: bash tests/integration/prepare_fixtures.sh
+      - name: Execute selected real integration route
+        env:
+          PIPELINE_MODE: ${{ inputs.mode }}
+        run: bash tests/integration/run_real.sh .integration-fixtures ".integration-fixtures/${PIPELINE_MODE}-results" .integration-fixtures/work "$PIPELINE_MODE"

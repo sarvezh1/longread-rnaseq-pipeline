@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata in this file."
+title: "longread-rnaseq-pipeline"
+type: software
+authors:
+  - family-names: "Galgale"
+    given-names: "Sarvesh"
+version: "0.1.0"
+license: MIT
+abstract: >-
+  A Nextflow DSL2 workflow for reproducible human bulk
+  long-read RNA-seq analysis using Oxford Nanopore and PacBio Iso-Seq data.

@@ -1,0 +1,3 @@
+sample,platform,library_type,preprocessing,condition,replicate,reads,primer_fasta,primer_pair,ont_kit,require_polya
+ont_stub,ont,cdna,pychopper,control,1,tests/data/structural/ont.fastq,,,PCS111,false
+pacbio_stub,pacbio,isoseq_hifi,isoseq,control,1,tests/data/structural/pacbio_hifi.bam,tests/data/structural/primers.fasta,,,false

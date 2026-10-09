@@ -1,0 +1,15 @@
+transcript_id	count
+iq_shared	5
+iq_chain	4
+iq_partial	3
+iq_single	2
+iq_only	1
+fl_shared	5
+fl_chain	4
+fl_partial	3
+fl_single	2
+fl_only	1
+ba_shared	5
+ba_chain	4
+ba_single	2
+ba_only	1

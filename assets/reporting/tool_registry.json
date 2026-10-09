@@ -1,0 +1,27 @@
+{
+  "registry_version": "1.0",
+  "tools": [
+    {"tool":"Nextflow","expected":"26.04.6","container":"host runtime","process":"workflow orchestration"},
+    {"tool":"MultiQC","expected":"1.35","container":"ghcr.io/multiqc/multiqc:v1.35@sha256:976be2094a3bc1dab7315ad03440d43aab09bf7756f84f3a92ef7ae1013e4bfd","process":"MULTIQC_REPORT"},
+    {"tool":"NanoPlot","expected":"1.48.0","container":"quay.io/biocontainers/nanoplot:1.48.0--pyhdfd78af_1","process":"NANOPLOT_RAW"},
+    {"tool":"pychopper","expected":"2.7.10","container":"quay.io/biocontainers/pychopper:2.7.10--pyhdfd78af_0","process":"PYCHOPPER"},
+    {"tool":"minimap2","expected":"2.30-r1287","container":"community.wave.seqera.io/library/minimap2_samtools:b09096fc890429ce","process":"MINIMAP2_INDEX; MINIMAP2_SPLICE"},
+    {"tool":"samtools","expected":"1.23.1; 1.24","container":"community.wave.seqera.io/library/minimap2_samtools:b09096fc890429ce; community.wave.seqera.io/library/htslib_samtools:1.24--d697cfb9dce007cd","process":"MINIMAP2_SPLICE (1.23.1); REFERENCE_VALIDATE, SAMTOOLS_ALIGNMENT_QC, NORMALIZED_MANIFEST (1.24)"},
+    {"tool":"lima","expected":"26.2.1","container":"quay.io/biocontainers/lima:26.2.1--h9ee0642_0","process":"LIMA_ISOSEQ"},
+    {"tool":"isoseq","expected":"26.2.0","container":"quay.io/biocontainers/isoseq:26.2.0--h9ee0642_0","process":"ISOSEQ_REFINE; ISOSEQ_CLUSTER2"},
+    {"tool":"pbmm2","expected":"26.2.0","container":"quay.io/biocontainers/pbmm2:26.2.0--h9ee0642_0","process":"PBMM2_INDEX; PBMM2_ISOSEQ"},
+    {"tool":"IsoQuant","expected":"4.0.0","container":"quay.io/biocontainers/isoquant:4.0.0--pyh106432d_0@sha256:ff40b81d8945f6724184fb5be90fb3740cbf9b6fe2680db4cbeed816bab73142","process":"ISOQUANT"},
+    {"tool":"SQANTI3","expected":"6.0.2","container":"quay.io/biocontainers/sqanti3:6.0.2--hdfd78af_1@sha256:3ebeb658fb2e0e308e73cba50dd3b97c63963d8225f303f298ad8ee76264939d","process":"SQANTI3_QC"},
+    {"tool":"FLAIR","expected":"3.0.1","container":"quay.io/biocontainers/flair:3.0.1--pyhdfd78af_0@sha256:a39894c1507c68241fba62ddbe1a931d5a6bfaacbcb6be24631d46b60e67ce84","process":"FLAIR_TRANSCRIPTOME"},
+    {"tool":"bambu","expected":"3.14.0","container":"longread-rnaseq-pipeline/bambu:3.14.0-bioc3.23-r4.6","image_id":"sha256:8e073d65a08cd3924b4e43491e9b20f191408e1e2c3a4cf4ee064fe0eb33b647","process":"BAMBU"},
+    {"tool":"R","expected":"4.6.1","container":"longread-rnaseq-pipeline/biology:bioc3.23-r4.6","image_id":"sha256:c1b5f1a76bcc8c2ef18b0a62a83542da66b56329f49cc92bac8041e97b540adc","process":"Block 4 statistical modules"},
+    {"tool":"Bioconductor","expected":"3.23","container":"longread-rnaseq-pipeline/biology:bioc3.23-r4.6","image_id":"sha256:c1b5f1a76bcc8c2ef18b0a62a83542da66b56329f49cc92bac8041e97b540adc","process":"Block 3/4 R modules"},
+    {"tool":"edgeR","expected":"4.10.5","container":"longread-rnaseq-pipeline/biology:bioc3.23-r4.6","process":"EDGER_DIFFERENTIAL"},
+    {"tool":"satuRn","expected":"1.20.0","container":"longread-rnaseq-pipeline/biology:bioc3.23-r4.6","process":"SATURN_DTU"},
+    {"tool":"IsoformSwitchAnalyzeR","expected":"2.12.0","container":"longread-rnaseq-pipeline/biology:bioc3.23-r4.6","process":"ISOFORM_SWITCH_ANALYZE"},
+    {"tool":"clusterProfiler","expected":"4.20.2","container":"longread-rnaseq-pipeline/biology:bioc3.23-r4.6","process":"FUNCTIONAL_ENRICHMENT"},
+    {"tool":"org.Hs.eg.db","expected":"3.23.1","container":"longread-rnaseq-pipeline/biology:bioc3.23-r4.6","process":"FUNCTIONAL_ENRICHMENT"},
+    {"tool":"SUPPA","expected":"2.4","observed_alias":"release","container":"longread-rnaseq-pipeline/suppa:2.4","image_id":"sha256:bc5ec11b908e11f7f8692c3e8df3da6a6c7eb3c2f9fb90c4b84b2e942a5c08ed","process":"SUPPA_ANALYSIS"},
+    {"tool":"TransDecoder","expected":"6.0.0","container":"trinityrnaseq/transdecoder:6.0.0@sha256:78895668eaaa35d00659a98b30bd7341b512979547c0c517bb5ac49573975511","process":"TRANSDECODER"}
+  ]
+}

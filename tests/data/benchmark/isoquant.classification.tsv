@@ -1,0 +1,6 @@
+isoform	structural_category	associated_gene	associated_transcript
+iq_shared	full-splice_match	gene_shared	ref1
+iq_chain	novel_in_catalog	gene_chain	NA
+iq_partial	novel_not_in_catalog	gene_partial	NA
+iq_single	intergenic	gene_single	NA
+iq_only	antisense	gene_iq	NA

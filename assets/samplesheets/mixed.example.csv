@@ -1,0 +1,4 @@
+sample,platform,library_type,preprocessing,condition,replicate,reads,primer_fasta,primer_pair,ont_kit,require_polya
+ont_validation,ont,pcr_cdna,none,validation,1,data/ont_validation.fastq.gz,,,,false
+pacbio_validation,pacbio,isoseq_flnc,none,validation,1,data/pacbio_validation.flnc.bam,,,,false
+

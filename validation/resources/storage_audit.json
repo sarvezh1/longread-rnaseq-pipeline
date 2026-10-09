@@ -1,0 +1,18 @@
+{
+  "schema_version": "6.0",
+  "manifest": "validation/manifests/source_datasets.tsv",
+  "datasets_with_exact_size": 6,
+  "compressed_bytes": 55589959267,
+  "estimated_unpacked_bytes": 166769877801,
+  "estimated_work_bytes": 333539755602,
+  "estimated_result_bytes": 55589959267,
+  "estimated_total_bytes": 611489551937,
+  "available_bytes": 46352101376,
+  "fits": false,
+  "decision": "FULL_LOCAL_EXECUTION_DEFERRED_STORAGE",
+  "estimation_policy": {
+    "unpacked_multiplier": 3.0,
+    "work_multiplier": 6.0,
+    "result_multiplier": 1.0
+  }
+}

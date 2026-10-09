@@ -1,0 +1,15 @@
+chr1	fixture	transcript	100	399	.	+	.	gene_id "gene_shared"; transcript_id "fl_shared";
+chr1	fixture	exon	100	199	.	+	.	gene_id "gene_shared"; transcript_id "fl_shared";
+chr1	fixture	exon	300	399	.	+	.	gene_id "gene_shared"; transcript_id "fl_shared";
+chr1	fixture	transcript	490	820	.	+	.	gene_id "gene_chain"; transcript_id "fl_chain";
+chr1	fixture	exon	490	599	.	+	.	gene_id "gene_chain"; transcript_id "fl_chain";
+chr1	fixture	exon	700	820	.	+	.	gene_id "gene_chain"; transcript_id "fl_chain";
+chr1	fixture	transcript	900	1499	.	+	.	gene_id "gene_partial"; transcript_id "fl_partial";
+chr1	fixture	exon	900	999	.	+	.	gene_id "gene_partial"; transcript_id "fl_partial";
+chr1	fixture	exon	1100	1180	.	+	.	gene_id "gene_partial"; transcript_id "fl_partial";
+chr1	fixture	exon	1400	1499	.	+	.	gene_id "gene_partial"; transcript_id "fl_partial";
+chr1	fixture	transcript	1510	1609	.	+	.	gene_id "gene_single"; transcript_id "fl_single";
+chr1	fixture	exon	1510	1609	.	+	.	gene_id "gene_single"; transcript_id "fl_single";
+chr2	fixture	transcript	100	299	.	+	.	gene_id "gene_fl"; transcript_id "fl_only";
+chr2	fixture	exon	100	149	.	+	.	gene_id "gene_fl"; transcript_id "fl_only";
+chr2	fixture	exon	250	299	.	+	.	gene_id "gene_fl"; transcript_id "fl_only";

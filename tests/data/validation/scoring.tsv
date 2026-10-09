@@ -1,0 +1,2 @@
+run_id	dataset_id	platform	caller	truth_type	prediction	prediction_format	truth	truth_contig_prefix
+fixture_run	deterministic_fixture	synthetic	fixture	deterministic test fixture	tests/data/validation/prediction.gtf	gtf	tests/data/validation/truth.gtf	

@@ -1,0 +1,2 @@
+sample,platform,library_type,preprocessing,condition,replicate,reads,primer_fasta,primer_pair,ont_kit,require_polya
+unsupported_stub,ont,isoseq_hifi,isoseq,control,1,tests/data/structural/ont.fastq,tests/data/structural/primers.fasta,,,false

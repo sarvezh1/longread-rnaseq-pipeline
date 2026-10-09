@@ -1,0 +1,7 @@
+chrS	fixture	exon	105	199	.	+	.	gene_id "g1"; transcript_id "pred1";
+chrS	fixture	exon	300	394	.	+	.	gene_id "g1"; transcript_id "pred1";
+chrS	fixture	exon	500	599	.	+	.	gene_id "g2"; transcript_id "pred2";
+chrS	fixture	exon	700	749	.	-	.	gene_id "g3"; transcript_id "pred3";
+chrS	fixture	exon	800	899	.	-	.	gene_id "g3"; transcript_id "pred3";
+chrS	fixture	exon	100	249	.	+	.	gene_id "g4"; transcript_id "pred_fp";
+chrS	fixture	exon	350	450	.	+	.	gene_id "g4"; transcript_id "pred_fp";

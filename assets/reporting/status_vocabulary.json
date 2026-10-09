@@ -1,0 +1,47 @@
+{
+  "COMPLETE": {
+    "class": "successful",
+    "description": "The analysis completed and produced its required outputs."
+  },
+  "COMPLETE_EMPTY_RESULT": {
+    "class": "successful_empty",
+    "description": "The analysis completed correctly but found no reportable records."
+  },
+  "NOT_RUN_DISABLED": {
+    "class": "not_run",
+    "description": "The optional analysis was disabled by configuration."
+  },
+  "NOT_RUN_NO_EXPLICIT_CONTRAST": {
+    "class": "not_run",
+    "description": "No biological comparison was requested explicitly."
+  },
+  "NOT_RUN_INSUFFICIENT_REPLICATION": {
+    "class": "not_run",
+    "description": "The design did not meet the minimum biological-replication requirement."
+  },
+  "NOT_RUN_INVALID_DESIGN": {
+    "class": "not_run",
+    "description": "The requested statistical design or contrast was not estimable."
+  },
+  "NOT_RUN_NO_EVENTS": {
+    "class": "not_run",
+    "description": "No applicable events were available for this analysis."
+  },
+  "NOT_AVAILABLE_SPARSE_INPUT": {
+    "class": "unavailable",
+    "description": "The input was valid but too sparse for the tool-native analysis."
+  },
+  "PREDICTION_NOT_AVAILABLE_SPARSE_INPUT": {
+    "class": "unavailable",
+    "description": "ORF candidates were retained, but reliable primary prediction was unavailable for sparse input."
+  },
+  "NO_TRANSCRIPTS": {
+    "class": "successful_empty",
+    "description": "The required workflow completed but no transcript models were present."
+  },
+  "FAILED": {
+    "class": "failed",
+    "description": "A required technical stage or contract failed."
+  }
+}
+

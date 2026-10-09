@@ -1,0 +1,3 @@
+task_id	process	tag	status	realtime	%cpu	peak_rss	read_bytes	write_bytes
+1	CALLER_A	fixture	COMPLETED	1m 30s	150%	2 GB	10 MB	5 MB
+2	CALLER_B	fixture	CACHED	500ms	-	512 MiB	-	-

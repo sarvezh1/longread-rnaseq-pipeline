@@ -1,0 +1,7 @@
+sample	condition	replicate	platform	library_type
+ctrl_1	control	1	ont	cdna
+ctrl_2	control	2	ont	cdna
+ctrl_3	control	3	ont	cdna
+treat_1	treatment	1	ont	cdna
+treat_2	treatment	2	ont	cdna
+treat_3	treatment	3	ont	cdna

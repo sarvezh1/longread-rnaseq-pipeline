@@ -1,0 +1,7 @@
+sample	experiment_accession	file_accession	biosample_accession	condition	replicate	platform	library_protocol	compressed_bytes	source_url	validation_status
+h1_ont_cdna_rep1	ENCSR016IKV	ENCFF326IBB	ENCBS664DSZ	H1-hES	1	ONT	cDNA size-selected 600-5000 nt	12036441352	https://encode-public.s3.amazonaws.com/2021/08/28/ace414ce-90ac-4e47-a1e1-bb8d03c3a53b/ENCFF326IBB.fastq.gz	DEFERRED_STORAGE
+h1_ont_cdna_rep2	ENCSR016IKV	ENCFF714YOZ	ENCBS872CFG	H1-hES	2	ONT	cDNA size-selected 600-5000 nt	NA	https://www.encodeproject.org/files/ENCFF714YOZ/	DEFERRED_STORAGE
+h1_ont_cdna_rep3	ENCSR016IKV	ENCFF955CIA	ENCBS667PZC	H1-hES	3	ONT	cDNA size-selected 600-5000 nt	NA	https://www.encodeproject.org/files/ENCFF955CIA/	DEFERRED_STORAGE
+endodermal_ont_cdna_rep1	ENCSR485VRY	ENCFF180OMN	ENCBS464AKI	endodermal	1	ONT	cDNA size-selected 600-5000 nt	NA	https://www.encodeproject.org/files/ENCFF180OMN/	DEFERRED_STORAGE
+endodermal_ont_cdna_rep2	ENCSR485VRY	ENCFF754BZS	ENCBS012DYC	endodermal	2	ONT	cDNA size-selected 600-5000 nt	NA	https://www.encodeproject.org/files/ENCFF754BZS/	DEFERRED_STORAGE
+endodermal_ont_cdna_rep3	ENCSR485VRY	ENCFF277PKW	ENCBS971DDS	endodermal	3	ONT	cDNA size-selected 600-5000 nt	NA	https://www.encodeproject.org/files/ENCFF277PKW/	DEFERRED_STORAGE

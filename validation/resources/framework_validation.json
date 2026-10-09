@@ -1,0 +1,9 @@
+{
+  "schema_version": "6.0",
+  "nextflow_observed_version": "26.04.6",
+  "validation_workflow_stub_status": "COMPLETE",
+  "resume_status": "CACHED",
+  "container_used_for_stub": false,
+  "scientific_result": false,
+  "purpose": "workflow composition, manifest routing, and resume validation"
+}

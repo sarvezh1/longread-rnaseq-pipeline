@@ -1,0 +1,5 @@
+chrS	fixture	exon	100	199	.	+	.	gene_id "g1"; transcript_id "truth1";
+chrS	fixture	exon	300	399	.	+	.	gene_id "g1"; transcript_id "truth1";
+chrS	fixture	exon	500	599	.	+	.	gene_id "g2"; transcript_id "truth2";
+chrS	fixture	exon	700	749	.	-	.	gene_id "g3"; transcript_id "truth3";
+chrS	fixture	exon	800	899	.	-	.	gene_id "g3"; transcript_id "truth3";

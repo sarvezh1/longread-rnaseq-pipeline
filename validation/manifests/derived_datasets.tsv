@@ -1,0 +1,11 @@
+derived_id	source_dataset_id	population	fraction	seed	method	biological_replicate_claim	status
+wtc11_ont_rep1_d10	wtc11_ont_cdna_rep1	full source FASTQ	0.10	61703	SHA-256 read-identifier threshold	false	PLANNED_EXTERNAL_STORAGE
+wtc11_ont_rep1_d25	wtc11_ont_cdna_rep1	full source FASTQ	0.25	61703	SHA-256 read-identifier threshold	false	PLANNED_EXTERNAL_STORAGE
+wtc11_ont_rep1_d50	wtc11_ont_cdna_rep1	full source FASTQ	0.50	61703	SHA-256 read-identifier threshold	false	PLANNED_EXTERNAL_STORAGE
+wtc11_ont_rep1_d75	wtc11_ont_cdna_rep1	full source FASTQ	0.75	61703	SHA-256 read-identifier threshold	false	PLANNED_EXTERNAL_STORAGE
+wtc11_ont_rep1_d100	wtc11_ont_cdna_rep1	full source FASTQ	1.00	61703	SHA-256 read-identifier threshold	false	PLANNED_EXTERNAL_STORAGE
+wtc11_pacbio_rep1_d10	wtc11_pacbio_cdna_rep1	full source FASTQ	0.10	61703	SHA-256 read-identifier threshold	false	PLANNED_EXTERNAL_STORAGE
+wtc11_pacbio_rep1_d25	wtc11_pacbio_cdna_rep1	full source FASTQ	0.25	61703	SHA-256 read-identifier threshold	false	PLANNED_EXTERNAL_STORAGE
+wtc11_pacbio_rep1_d50	wtc11_pacbio_cdna_rep1	full source FASTQ	0.50	61703	SHA-256 read-identifier threshold	false	PLANNED_EXTERNAL_STORAGE
+wtc11_pacbio_rep1_d75	wtc11_pacbio_cdna_rep1	full source FASTQ	0.75	61703	SHA-256 read-identifier threshold	false	PLANNED_EXTERNAL_STORAGE
+wtc11_pacbio_rep1_d100	wtc11_pacbio_cdna_rep1	full source FASTQ	1.00	61703	SHA-256 read-identifier threshold	false	PLANNED_EXTERNAL_STORAGE

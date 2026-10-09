@@ -1,0 +1,6 @@
+transcript_id	gene_id	chrom	strand	transcript_start	transcript_end	transcript_length	exon_count	exon_class	exon_coordinates	intron_chain	structural_category	associated_gene	associated_transcript	known_novel
+T1	G1	chrTest	+	100	500	401	1	single-exon	100-500	NA	full-splice_match	G1	T1	known
+T2a	G2	chrTest	+	1000	1499	300	3	multi-exon	1000-1099,1200-1299,1400-1499	1100-1199,1300-1399	novel_in_catalog	G2	NA	novel_or_other
+T2b	G2	chrTest	+	1000	1499	200	2	multi-exon	1000-1099,1400-1499	1100-1399	novel_not_in_catalog	G2	NA	novel_or_other
+T3	G3	chrTest	-	2000	2399	400	1	single-exon	2000-2399	NA	full-splice_match	G3	T3	known
+TZERO	G4	chrTest	+	3000	3299	300	1	single-exon	3000-3299	NA	intergenic	NA	NA	novel_or_other

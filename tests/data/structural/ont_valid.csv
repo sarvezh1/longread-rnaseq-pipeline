@@ -1,0 +1,2 @@
+sample,platform,library_type,preprocessing,condition,replicate,reads,primer_fasta,primer_pair,ont_kit,require_polya
+ont_only_stub,ont,cdna,pychopper,control,1,tests/data/structural/ont.fastq,,,PCS114,false

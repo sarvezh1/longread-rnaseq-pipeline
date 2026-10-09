@@ -1,0 +1,3 @@
+caller_transcript_id	chrom	strand	transcript_start	transcript_end	exon_count	exon_coordinates	support_value
+r2_a	chrS	+	100	399	2	100-199,300-399	7
+r2_c	chrS	-	700	899	2	700-749,800-899	NA

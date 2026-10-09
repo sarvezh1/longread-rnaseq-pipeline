@@ -1,0 +1,5 @@
+feature_id	ctrl_1	ctrl_2	ctrl_3	treat_1	treat_2	treat_3
+G1	10	12	11	100	110	90
+G2	100	100	100	200	200	200
+G3	50	48	52	100	96	104
+GZERO	0	0	0	0	0	0
